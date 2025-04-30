@@ -1,7 +1,7 @@
 const hre = require("hardhat");
 async function main() {
  // Remplacez par l'adresse de votre contrat déployé
- const contractAddress = "0x2bAAe578DC7180F00f0b159aA03A44BD92136d7f"; //////////////////////
+ const contractAddress = "0x93341cA7bc6EFF6394ce87aF583DAF75C6b0807f";
  // On se connecte à notre contrat existant
  const HelloWorld = await hre.ethers.getContractFactory("HelloWorld");
  const hello = await HelloWorld.attach(contractAddress);
@@ -9,7 +9,7 @@ async function main() {
  const currentMessage = await hello.message();
  console.log("Message actuel :", currentMessage);
  // On met à jour le message
- const tx = await hello.update("Nouveau message !");
+ const tx = await hello.update("Update éxecuté avec succès !");
  await tx.wait();
  console.log("Message mis à jour !");
 

@@ -2,7 +2,7 @@ const hre = require("hardhat");
 
 async function main() {
      const HelloWorld = await hre.ethers.getContractFactory("HelloWorld");
-     const hello = await HelloWorld.deploy("Bonjour, Blockchain !");
+     const hello = await HelloWorld.deploy("Bonjour, Bilal !");
      await hello.waitForDeployment();
      console.log(`Contrat déployé à l'adresse : ${hello.target}`);
     }
